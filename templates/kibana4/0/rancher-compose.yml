@@ -4,12 +4,12 @@
   description: "Kibana: Explore & Visualize Your Data"
   uuid: kibana-0
   questions:
-    - variable: "elasticsearch_source"
-      description: "Link to elasticsearch service or stack/service"
+    - variable: "ELASTICSEARCH_URL"
+      description: "Link to your elasticsearch instance"
       label: "Elasticsearch source"
-      type: "service"
+      type: "string"
       required: true
-      default: "es/elasticsearch-clients"
+      default: "http://elasticsearch:9200"
 nginx-proxy:
   metadata:
     nginx:
