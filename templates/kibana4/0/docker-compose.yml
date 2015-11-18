@@ -7,6 +7,8 @@ kibana-vip:
   links:
   - nginx-proxy:kibana4
   stdin_open: true
+  labels:
+    io.rancher.loadbalancer.ssl.ports: '443'
 nginx-proxy-conf:
   image: rancher/nginx-conf:v0.2.0
   command: "-backend=rancher --prefix=/2015-07-25"
